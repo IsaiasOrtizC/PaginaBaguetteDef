@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto - Baguette Shop</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(to right, #fff9e6, #fff3cc);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(90deg, #ffcc33, #ffdd55);
+      padding: 25px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      color: #b00;
+      animation: fadeIn 1s ease;
+    }
+
+    form {
+      max-width: 450px;
+      margin: 30px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      animation: fadeIn 1s ease;
+    }
+
+    h2 {
+      text-align: center;
+      color: #ffcc33;
+      margin-bottom: 20px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #ffcc33;
+      box-shadow: 0 0 8px rgba(255,204,51,0.5);
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 10px;
+      background: #ffcc33;
+      color: #333;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #e6b727;
+    }
+
+    .info {
+      text-align: center;
+      margin-top: 25px;
+      font-size: 14px;
+      color: #b00;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>Contacto</header>
+
+  <form>
+    <h2>¡Escríbenos!</h2>
+    <input type="text" placeholder="Nombre" required>
+    <input type="email" placeholder="Correo electrónico" required>
+    <textarea placeholder="Mensaje" rows="5" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+
+  <div class="info">
+    <p>📞 Teléfono: +56 9 1234 5678</p>
+    <p>📍 Dirección: Calle Baguette 123, Santiago, Chile</p>
+    <p>✉️ Correo: contacto@baguetteshop.cl</p>
+  </div>
+
+</body>
+</html>
