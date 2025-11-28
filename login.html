@@ -20,32 +20,57 @@
       background: white;
       border-radius: 20px;
       box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-      padding: 40px;
-      width: 350px;
+      padding: 40px 30px;
+      width: 400px;
       text-align: center;
       animation: fadeIn 1s ease;
+      position: relative;
+    }
+
+    .login-container img.logo {
+      width: 100px;
+      margin-bottom: 20px;
     }
 
     h1 {
-      margin-bottom: 30px;
+      margin-bottom: 10px;
       color: #ffcc33;
       text-shadow: 1px 1px 2px #b88600;
     }
 
-    input {
+    p.welcome {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .input-group {
+      position: relative;
+      margin: 15px 0;
+    }
+
+    .input-group input {
       width: 100%;
-      padding: 12px;
-      margin: 10px 0;
+      padding: 12px 40px 12px 15px;
       border-radius: 10px;
       border: 1px solid #ccc;
       font-size: 14px;
       transition: 0.3s;
     }
 
-    input:focus {
+    .input-group input:focus {
       border-color: #ffcc33;
       box-shadow: 0 0 8px rgba(255,204,51,0.5);
       outline: none;
+    }
+
+    .input-group i {
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%);
+      color: #b88600;
+      font-size: 18px;
     }
 
     .btn-login {
@@ -59,6 +84,7 @@
       font-weight: bold;
       cursor: pointer;
       transition: 0.3s;
+      font-size: 16px;
     }
 
     .btn-login:hover {
@@ -82,27 +108,68 @@
       color: #ffcc33;
     }
 
+    .social-login {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-login a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #eee;
+      text-decoration: none;
+      color: #333;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .social-login a:hover {
+      background: #ffcc33;
+      color: #333;
+    }
+
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
   </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
   <div class="login-container">
-    <h1>Iniciar Sesión</h1>
+    <img src="logo.png" alt="Logo" class="logo">
+    <h1>Bienvenido</h1>
+    <p class="welcome">Accede a tu cuenta en Baguette Shop y descubre nuestras deliciosas baguettes.</p>
+
     <form action="" method="POST">
-      <input type="text" placeholder="Usuario" name="username" required>
-      <input type="password" placeholder="Contraseña" name="password" required>
+      <div class="input-group">
+        <input type="text" placeholder="Usuario" name="username" required>
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="input-group">
+        <input type="password" placeholder="Contraseña" name="password" required>
+        <i class="fas fa-lock"></i>
+      </div>
       <button type="submit" class="btn-login">Entrar</button>
     </form>
+
     <div class="links">
       <a href="#">Registrarse</a> |
       <a href="#">¿Olvidaste tu contraseña?</a>
+    </div>
+
+    <div class="social-login">
+      <a href="#"><i class="fab fa-google"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
     </div>
   </div>
 
 </body>
 </html>
-
