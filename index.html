@@ -1,50 +1,65 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BaguetteShop — Inicio</title>
-<link rel="stylesheet" href="/assets/css/styles.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Baguette Shop</title>
+<style>
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: #fff8d6;
+color: #333;
+}
+header {
+background: #ffda44;
+padding: 20px;
+text-align: center;
+font-size: 28px;
+font-weight: bold;
+box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+animation: fadeIn 1s ease-in-out;
+}
+nav {
+display: flex;
+justify-content: center;
+gap: 20px;
+margin: 20px 0;
+}
+nav a {
+text-decoration: none;
+color: #333;
+font-weight: bold;
+background: #ffeb7a;
+padding: 10px 20px;
+border-radius: 8px;
+transition: transform 0.2s;
+}
+nav a:hover {
+transform: scale(1.1);
+background: #ffe14d;
+}
+.hero {
+text-align: center;
+padding: 60px 20px;
+background: #ffef9e;
+animation: slideIn 1s ease;
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideIn { from { transform: translateY(40px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+</style>
 </head>
 <body>
-<header class="site-header">
-<div class="container">
-<a class="logo" href="index.html">BaguetteShop</a>
+<header>Baguette Shop</header>
 <nav>
-<a href="products.html">Baguettes</a>
+<a href="products.html">Productos</a>
 <a href="about.html">Nosotros</a>
 <a href="contact.html">Contacto</a>
-<a href="cart.html">Carrito (<span id="cart-count">0</span>)</a>
-<a href="login.html">Ingresar</a>
+<a href="cart.html">Carrito</a>
 </nav>
+<div class="hero">
+<h1>Las Mejores Baguettes Artesanales</h1>
+<p>Frescas, crujientes y hechas con pasión.</p>
 </div>
-</header>
-
-
-<main class="container">
-<section class="hero">
-<h1>Las mejores baguettes artesanales</h1>
-<p>Hechas con amor y entregadas frescas.</p>
-<a class="btn" href="products.html">Ver catálogo</a>
-</section>
-
-
-<section class="featured">
-<h2>Destacadas</h2>
-<div class="grid" id="featured-list">
-<!-- JS inyecta tarjetas -->
-</div>
-</section>
-</main>
-
-
-<footer class="site-footer">
-<div class="container">
-<p>&copy; <span id="year"></span> BaguetteShop — Todos los derechos reservados</p>
-</div>
-</footer>
-
-
-<script src="/assets/js/main.js"></script>
 </body>
 </html>
