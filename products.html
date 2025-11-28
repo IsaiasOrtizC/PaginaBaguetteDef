@@ -1,53 +1,148 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Productos - Baguette Shop</title>
-<style>
-body { margin: 0; font-family: Arial; background: #fff8d6; }
-header { background: #ffda44; padding: 20px; text-align:center; font-size:28px; font-weight:bold; }
-.container { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; padding:20px; }
-.card {
-background:white;
-width:260px;
-padding:15px;
-border-radius:10px;
-box-shadow:0 3px 6px rgba(0,0,0,0.2);
-transition:transform .2s;
-animation: fadeIn .8s ease;
-}
-.card:hover { transform: scale(1.05); }
-.card img { width:100%; border-radius:8px; }
-.buy-btn {
-display:block;
-margin-top:10px;
-padding:10px;
-background:#ffda44;
-text-align:center;
-font-weight:bold;
-border-radius:8px;
-text-decoration:none;
-color:#333;
-}
-@keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productos - Baguette Shop</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #fff9e6;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(90deg, #ffcc33, #ffdd55);
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #b88600;
+    }
+
+    .productos {
+      padding: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+      animation: fadeIn 1s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 15px;
+      height: 170px;
+      object-fit: cover;
+    }
+
+    .precio {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 10px;
+      color: #b88600;
+    }
+
+    .btn {
+      margin-top: 15px;
+      display: inline-block;
+      background: #ffcc33;
+      padding: 12px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #e6b727;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
-<header>Productos</header>
-<div class="container">
-<div class="card">
-<img src="https://via.placeholder.com/250x150" />
-<h3>Baguette Tradicional</h3>
-<p>$2.000</p>
-<a class="buy-btn" href="cart.html">Agregar</a>
-</div>
-<div class="card">
-<img src="https://via.placeholder.com/250x150" />
-<h3>Baguette Integral</h3>
-<p>$2.500</p>
-<a class="buy-btn" href="cart.html">Agregar</a>
-</div>
-</div>
+
+  <header>
+    <h1>Productos</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="products.html">Productos</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <section class="productos">
+    <div class="card">
+      <img src="baguette_classic.jpg" alt="Baguette Clásica">
+      <h2>Baguette Clásica</h2>
+      <p>Crujiente y tradicional, recién horneada.</p>
+      <p class="precio">$2.000</p>
+      <a class="btn" href="cart.html">Agregar al carrito</a>
+    </div>
+
+    <div class="card">
+      <img src="baguette_integral.jpg" alt="Baguette Integral">
+      <h2>Baguette Integral</h2>
+      <p>Hecha con harina integral y semillas.</p>
+      <p class="precio">$2.500</p>
+      <a class="btn" href="cart.html">Agregar al carrito</a>
+    </div>
+
+    <div class="card">
+      <img src="baguette_cheese.jpg" alt="Baguette con Queso">
+      <h2>Baguette con Queso</h2>
+      <p>Perfecta mezcla de pan fresco y queso fundido.</p>
+      <p class="precio">$3.000</p>
+      <a class="btn" href="cart.html">Agregar al carrito</a>
+    </div>
+
+    <div class="card">
+      <img src="baguette_garlic.jpg" alt="Baguette Ajo Mantequilla">
+      <h2>Baguette Ajo Mantequilla</h2>
+      <p>Aromática y llena de sabor, ideal para acompañar comidas.</p>
+      <p class="precio">$2.800</p>
+      <a class="btn" href="cart.html">Agregar al carrito</a>
+    </div>
+  </section>
+
 </body>
 </html>
+
