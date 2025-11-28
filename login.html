@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Baguette Shop</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(to right, #fff9e6, #fff3cc);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #333;
+    }
+
+    .login-container {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      padding: 40px;
+      width: 350px;
+      text-align: center;
+      animation: fadeIn 1s ease;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      color: #ffcc33;
+      text-shadow: 1px 1px 2px #b88600;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    input:focus {
+      border-color: #ffcc33;
+      box-shadow: 0 0 8px rgba(255,204,51,0.5);
+      outline: none;
+    }
+
+    .btn-login {
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 10px;
+      background: #ffcc33;
+      color: #333;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-login:hover {
+      background: #e6b727;
+    }
+
+    .links {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .links a {
+      color: #b88600;
+      text-decoration: none;
+      margin: 0 5px;
+      transition: 0.3s;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+      color: #ffcc33;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h1>Iniciar Sesión</h1>
+    <form action="" method="POST">
+      <input type="text" placeholder="Usuario" name="username" required>
+      <input type="password" placeholder="Contraseña" name="password" required>
+      <button type="submit" class="btn-login">Entrar</button>
+    </form>
+    <div class="links">
+      <a href="#">Registrarse</a> |
+      <a href="#">¿Olvidaste tu contraseña?</a>
+    </div>
+  </div>
+
+</body>
+</html>
+
