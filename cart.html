@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito - Baguette Shop</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(to right, #fff9e6, #fff3cc);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(90deg, #ffcc33, #ffdd55);
+      padding: 25px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      color: #b00;
+      animation: fadeIn 1s ease;
+    }
+
+    .cart-container {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      animation: fadeIn 1s ease;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      color: #ffcc33;
+    }
+
+    td img {
+      width: 80px;
+      border-radius: 10px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      background: #ffcc33;
+      color: #333;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #e6b727;
+    }
+
+    .btn-danger {
+      background: #b00;
+      color: #fff;
+    }
+
+    .btn-danger:hover {
+      background: #ff4444;
+    }
+
+    .total {
+      text-align: right;
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #b88600;
+    }
+
+    .checkout {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 20px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>Carrito de Compras</header>
+
+  <div class="cart-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Subtotal</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img src="nrmal.jpg" alt="Baguette Clásica"> Baguette Clásica</td>
+          <td>$2.000</td>
+          <td>1</td>
+          <td>$2.000</td>
+          <td><button class="btn btn-danger">Eliminar</button></td>
+        </tr>
+        <tr>
+          <td><img src="QUESO.jpg" alt="Baguette con Queso"> Baguette con Queso</td>
+          <td>$3.000</td>
+          <td>2</td>
+          <td>$6.000</td>
+          <td><button class="btn btn-danger">Eliminar</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="total">Total: $8.000</div>
+
+    <div class="checkout">
+      <button class="btn">Finalizar Compra</button>
+    </div>
+  </div>
+
+</body>
+</html>
